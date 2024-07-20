@@ -4,7 +4,7 @@ from .views import OrderViewSet
 
 router = DefaultRouter()
 router.register(r'orders', OrderViewSet, basename='orders')
-
+app_name = 'orders'
 urlpatterns = [
     path('', include(router.urls)),
 ]
