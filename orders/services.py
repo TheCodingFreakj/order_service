@@ -39,7 +39,7 @@ class PaymentService:
     def initiate_payment(order, payment_type, customer_info,total_amount):
         try:
             logger.debug(f"Calling the payment service handler here")
-            response = requests.post('http://payment_service:8004/payments', json={
+            response = requests.post('https://order-service-rf8x.onrender.com/payments', json={
                 'order_id': order,
                 'amount': total_amount,
                 'user_id': customer_info, 
